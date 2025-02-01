@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle en Español</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Wordle en Español</h1>
+        <div id="grid" class="grid"></div>
+        <div id="input-container" class="input-container">
+            <input type="text" id="input-word-0" maxlength="1" readonly />
+            <input type="text" id="input-word-1" maxlength="1" readonly />
+            <input type="text" id="input-word-2" maxlength="1" readonly />
+            <input type="text" id="input-word-3" maxlength="1" readonly />
+            <input type="text" id="input-word-4" maxlength="1" readonly />
+        </div>
+        <div id="keyboard" class="keyboard">
+            <!-- Primera fila -->
+            <button onclick="insertLetter('q')">Q</button>
+            <button onclick="insertLetter('w')">W</button>
+            <button onclick="insertLetter('e')">E</button>
+            <button onclick="insertLetter('r')">R</button>
+            <button onclick="insertLetter('t')">T</button>
+            <button onclick="insertLetter('y')">Y</button>
+            <button onclick="insertLetter('u')">U</button>
+            <button onclick="insertLetter('i')">I</button>
+            <button onclick="insertLetter('o')">O</button>
+            <button onclick="insertLetter('p')">P</button>
+            <!-- Segunda fila -->
+            <button onclick="insertLetter('a')">A</button>
+            <button onclick="insertLetter('s')">S</button>
+            <button onclick="insertLetter('d')">D</button>
+            <button onclick="insertLetter('f')">F</button>
+            <button onclick="insertLetter('g')">G</button>
+            <button onclick="insertLetter('h')">H</button>
+            <button onclick="insertLetter('j')">J</button>
+            <button onclick="insertLetter('k')">K</button>
+            <button onclick="insertLetter('l')">L</button>
+            <!-- Tercera fila -->
+            <button onclick="insertLetter('z')">Z</button>
+            <button onclick="insertLetter('x')">X</button>
+            <button onclick="insertLetter('c')">C</button>
+            <button onclick="insertLetter('v')">V</button>
+            <button onclick="insertLetter('b')">B</button>
+            <button onclick="insertLetter('n')">N</button>
+            <button onclick="insertLetter('m')">M</button>
+            <!-- Botón borrar -->
+            <button onclick="deleteLetter()">⌫</button>
+        </div>
+        <button class="wide" onclick="checkWord()">Verificar</button>
+        <p id="message"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

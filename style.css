@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #525252;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+    width: 420px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 70px);
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.grid div {
+    width: 70px;
+    height: 70px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 10px;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    width: 70px;
+    margin: 0 8px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #4CAF50;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #388e3c;
+}
+
+p {
+    font-size: 16px;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(10, 60px);
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.keyboard button {
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+    background-color: #333;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.keyboard button:hover {
+    background-color: #4CAF50;
+    transform: scale(1.05);
+}
+
+.keyboard button:active {
+    background-color: #388e3c;
+    transform: scale(0.95);
+}
+
+.keyboard .wide {
+    width: 120px; /* for the "Borrar" button */
+}
+
