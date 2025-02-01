@@ -20,22 +20,20 @@ const words = [
     "vigas", "vinos", "vivir", "volar", "votar", "yates", "yemas", "zonas", "zorro", "zurdo"
 ];
   // Lista de palabras en español
-const targetWord = words[Math.floor(Math.random() * words.length)];  // Selecciona una palabra aleatoria
+const targetWord = words[Math.floor(Math.random() * words.length)]; 
 let attempts = 0;
-let currentWord = ["", "", "", "", ""];  // Arreglo de 5 letras
+let currentWord = ["", "", "", "", ""];  
 
-// Función para crear la cuadrícula de los intentos
 function createGrid() {
     const grid = document.getElementById("grid");
-    for (let i = 0; i < 6; i++) {  // 6 intentos
-        for (let j = 0; j < 5; j++) {  // 5 letras por palabra
+    for (let i = 0; i < 6; i++) {  
+        for (let j = 0; j < 5; j++) {  
             const cell = document.createElement("div");
             grid.appendChild(cell);
         }
     }
 }
 
-// Función para insertar una letra en el primer espacio vacío
 function insertLetter(letter) {
     for (let i = 0; i < currentWord.length; i++) {
         if (currentWord[i] === "") {
@@ -46,7 +44,6 @@ function insertLetter(letter) {
     }
 }
 
-// Función para borrar la última letra ingresada
 function deleteLetter() {
     for (let i = currentWord.length - 1; i >= 0; i--) {
         if (currentWord[i] !== "") {
@@ -57,7 +54,6 @@ function deleteLetter() {
     }
 }
 
-// Función para verificar la palabra
 function checkWord() {
     const input = currentWord.join("");
     
@@ -77,7 +73,6 @@ function checkWord() {
     const cells = grid.children;
     const start = (attempts - 1) * 5;
 
-    // Recorremos cada letra de la palabra
     for (let i = 0; i < 5; i++) {
         const cell = cells[start + i];
         const letter = input[i];
@@ -102,7 +97,6 @@ function checkWord() {
         document.getElementById("message").innerText = `¡Has perdido! La palabra era: ${targetWord}`;
     }
 
-    // Limpiar las casillas de entrada
     currentWord = ["", "", "", "", ""];
     for (let i = 0; i < 5; i++) {
         document.getElementById(`input-word-${i}`).value = "";
