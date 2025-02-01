@@ -10,7 +10,8 @@ body {
 
 .game-container {
     text-align: center;
-    width: 420px;
+    width: 90%;
+    max-width: 420px; /* Limita el tamaño máximo */
 }
 
 h1 {
@@ -123,3 +124,68 @@ p {
     width: 120px; /* for the "Borrar" button */
 }
 
+/* Media Queries */
+
+/* Para tabletas y pantallas medianas */
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(4, 60px); /* Reduce el tamaño de la cuadrícula */
+    }
+
+    .grid div {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    input {
+        width: 60px;
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .keyboard {
+        grid-template-columns: repeat(8, 50px); /* Ajusta el teclado */
+    }
+
+    .keyboard button {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+}
+
+/* Para dispositivos móviles */
+@media screen and (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(3, 50px); /* Reduce aún más la cuadrícula */
+    }
+
+    .grid div {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    input {
+        width: 50px;
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    .keyboard {
+        grid-template-columns: repeat(7, 45px); /* Ajusta el teclado para móviles */
+    }
+
+    .keyboard button {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+}
