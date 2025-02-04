@@ -19,15 +19,15 @@ const words = [
     "trote", "vacas", "vagos", "valer", "valor", "veces", "vedas", "velas", "vemos", "venas", "venir", "verde",
     "vigas", "vinos", "vivir", "volar", "votar", "yates", "yemas", "zonas", "zorro", "zurdo"
 ];
-  // Lista de palabras en español
-const targetWord = words[Math.floor(Math.random() * words.length)]; 
-let attempts = 0;
-let currentWord = ["", "", "", "", ""];  
+
+const targetWord = words[Math.floor(Math.random() * words.length)]; // Selecciona una palabra aleatoria
+let attempts = 0; // Contador de intentos
+let currentWord = ["", "", "", "", ""]; // La palabra actual que el jugador está escribiendo
 
 function createGrid() {
     const grid = document.getElementById("grid");
-    for (let i = 0; i < 6; i++) {  
-        for (let j = 0; j < 5; j++) {  
+    for (let i = 0; i < 6; i++) {  // 6 intentos posibles
+        for (let j = 0; j < 5; j++) {  // 5 letras por palabra
             const cell = document.createElement("div");
             grid.appendChild(cell);
         }
